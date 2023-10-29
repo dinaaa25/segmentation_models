@@ -367,14 +367,12 @@ def InceptionV3(include_top=True,
             weights_path = keras_utils.get_file(
                 'inception_v3_weights_tf_dim_ordering_tf_kernels.h5',
                 WEIGHTS_PATH,
-                cache_subdir='models',
-                file_hash='9a0d58056eeedaa3f26cb7ebd46da564')
+                cache_subdir='models')
         else:
             weights_path = keras_utils.get_file(
                 'inception_v3_weights_tf_dim_ordering_tf_kernels_notop.h5',
                 WEIGHTS_PATH_NO_TOP,
-                cache_subdir='models',
-                file_hash='bcbd6486424b2319ff4ef7d526e38f63')
+                cache_subdir='models')
         model.load_weights(weights_path)
     elif weights is not None:
         model.load_weights(weights)
